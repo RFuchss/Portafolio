@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Assis Connecting - Home</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
+  <link href="css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- boxed bg -->
+  <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+  <!-- template skin -->
+  <link id="t-colors" href="color/default.css" rel="stylesheet">
+
+  <script>
+  function showPanels(panel) {
+    document.getElementById(panel).style.display = "block";
+  }
+
+  function hidePanels(panel) {
+    document.getElementById(panel).style.display = "none";
+  }
+
+  function showModal(modals)  {	
+    var modal = document.getElementById(modals);
+    modal.style.display = "block";
+  }
+
+  function hideModal(modals)  {
+    var modal = document.getElementById(modals);
+    modal.style.display = "none";
+  }
+
+  function assis() {
+    window.open('https://sales.vestta.co/SALES/assis_setup.step1?p_tipo=”FB_15”', "_blank");
+  }
+
+  function imag_alea() {
+    imag = new Array();
+
+    imag[0] = "img/popup_in_1.png";
+    imag[1] = "img/popup_in_2.png";
+    imag[2] = "img/popup_in_3.png";
+
+    aleatorio=Math.floor(Math.random()*3);
+
+    return imag[aleatorio];
+  }
+  onload=function(){
+    document.getElementById('imag').src=imag_alea();
+    setInterval(function(){document.getElementById('imag').src=imag_alea();},5000);
+  }
+  </script>
+
+  <style>
+.mySlides {display:none}
+.w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+  .mySlides {
+    display:none;  
+    opacity: 0;
+    animation: fadeout 0.3s 0.1s ease-out forwards;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+  }
+
+  @keyframes fadeout {
+    from {
+      opacity: 0;
+    }
+    
+    to {
+      opacity: 1;
+    }
+  }
+  </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <!-- puglin facebook boton -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=1726172957635438';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- puglin facebook boton -->
+
+  <div style="position:fixed;padding:7px;bottom:0;right:0;max-width:450px;z-index:999;margin-right: 10px;">
+  <!-- mibew button --><a id="mibew-agent-button" href="/mibew/chat?locale=en" target="_blank" onclick="Mibew.Objects.ChatPopups['5b192f7c78115ac8'].open();return false;"><img src="/mibew/b?i=mblue&amp;lang=en" border="0" alt="" /></a><script type="text/javascript" src="/mibew/js/compiled/chat_popup.js"></script><script type="text/javascript">Mibew.ChatPopup.init({"id":"5b192f7c78115ac8","url":"\/mibew\/chat?locale=en","preferIFrame":true,"modSecurity":false,"forceSecure":false,"width":640,"height":480,"resizable":true,"styleLoader":"\/mibew\/chat\/style\/popup"});</script><!-- / mibew button -->
+  </div>
+
+  <div id="asd" class="exampleses" style="cursor: pointer" onclick="assis()">
+    <img src="" id="imag" width="200px" height="150px">
+  </div>
+
+  <div id="myModal" class="modals" style="display: none">
+    <div class="modals-content">
+      <div class="modal-header" style="border-bottom-width: 2px;border-color:#013960">
+        <span class="close" onclick="hideModal('myModal')">&times;</span>
+        <div class="col text-center"><img class="modal-img-header" src="img/logo0.png">
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="text-center" style="color: #013960">Choose to activate your account</p><!--style="font-size:1.75vw" style="font-size:1.126vw"-->
+        <div class="row text-center">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h4 class="text-center" style="color: #013960">Spread the word</h4>
+              <p class="text-center" style="color: #013960">Tell everyone in your preferred network that you are using Assis Connecting</p>
+              <div class="row modal-rows" style="text-align: center">
+                <a class="fb-like" data-href="https://www.facebook.com/assis.connecting" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></a>
+                <a target="_blank" href="https://www.instagram.com/assis.connecting"><img class="modal-img" src="img/b-instagram.png"></a>
+              </div>
+              <p class="text-center" style="color: #013960">Good relationships endure because of trust and we trust 100% in you, 
+                that's why we do not verify if you have disseminated the information.</p>
+              <p class="text-center" style="color: #07abdc;cursor: pointer;" onclick="assis()">I have passed the word ✓</p>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+          <!--<div class="col-md-2"></div>
+          <div class="col-md-5">
+            <div class="card-body">
+              <h4 class="text-center" style="color: #013960">Payment information</h4>
+              <p class="text-center" style="color: #013960">enter your payment information and avoid interruptions when your trial period
+                 ends</p>
+              <div class="row text-center" >
+                <div class="col-md-12 text-center">
+                  <a id="bluebtn" class="btn call-btn-lg btn-blue btn-lg"><img class="modal-img" src="img/card.png"><br>Payment information</a>
+                </div>
+              </div>
+              <p class="text-center" style="color: #013960">There are no permanency contracts. You can cancel your accoint whenever you 
+                want. The payment will only be debited when it finishes your trial period.</p>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="wrapper">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" style="position: absolute;" role="navigation">
+      <div class="container navigation">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+          <a class="navbar-brand" href="index.html">
+                    <img src="img/logo0.png" alt="" width="170" height="70" />
+                </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="https://www.facebook.com/assis.connecting" style="padding-left: 5px;padding-right: 5px;"><img src="img/facebook.png" width="36px"></a></li>
+            <li><a href="https://www.instagram.com/assis.connecting" style="padding-left: 5px;padding-right: 5px;"><img src="img/instagram.png" width="36px"></a></li>
+            <li class="leng-btn"><a href="es/index.html" style="text-decoration: underline;font-size: 25px;color: white;padding-left: 10px;padding-right: 10px;">ES</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <!-- Section: intro -->
+    <section id="intro" class="intro">
+      <div class="intro-content" style="padding-top: 100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/2NnSPiRSsa8?&rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Section: intro -->
+
+    <!-- Section: boxes -->
+    <section id="boxes" class="home-section paddingtop-40">
+      <div class="text-center container wow bounceInLeft" data-wow-delay="0.3s">
+        <h1><b>YOUR TICKET TO A WORLD OF OPPORTUNITIES</b></h1>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-md-3" style="padding-right: 0px;">
+            <div class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box text-center">
+
+                <h4 class="h-blue">Prospects</h4>
+                <img src="img/logo1.png" width="128px"></img>
+                <ul class="ul-litle text-left" style="text-justify: inter-word">
+                  <li>Control your business agenda.</li>
+                  <!--<li>Keep track of your calls and visits to potential customers.</li>
+                  <li>Synchronized with your Google Calendar, Outlook or iOS.</li>-->
+                </ul>
+
+                <div class="collapse" id="collapseExample1">
+									<ul id="panel-1" class="ul-litle text-left" style="text-justify: inter-word;">
+										<li>Assis will provide you with a calendar over appointments.</li>
+										<li>This tool is Integrated with Google Calendar, iOS, Outlook.</li>
+										<li>Assis will send you every day an email with activities to do.</li>
+									</ul>
+								</div>
+								
+								<!--style="cursor: pointer;display: block;" onclick="showPanels('panel-1');showPanels('nover-1');hidePanels('ver-1')"-->
+                <a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"><div id="ver-1" class="text-left">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> MORE</span>
+                </div></a>
+								
+                <div id="nover-1" class="text-left" style="cursor: pointer;display: none;" onclick="hidePanels('panel-1');showPanels('ver-1');hidePanels('nover-1')">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> LESS</span>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3" style="padding-right: 0px;">
+            <div class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box text-center">
+
+                <h4 class="h-blue">Sales/Quotes/Invoices</h4>
+                <img src="img/logo2.png" width="128px"></img>
+                <ul class="ul-litle text-left" style="text-justify: inter-word">
+                  <li>Track your ongoing negotiations.</li>
+                  <!--<li>Make Quotes and send them to your customers.</li>
+                  <li>Record negotiations to have complete information.</li>-->
+                </ul>
+                
+								<div class="collapse" id="collapseExample2">
+									<ul id="panel-2" class="ul-litle text-left" style="text-justify: inter-word;">
+										<li>Assis will also create your customized invoice.</li>
+										<li>The quotation created by Assis can be exported to excel.</li>
+										<li>Assis will help keep you on track.</li>
+										<li>You can take notes with Assis by voice mail or text message.</li>
+										<li>Assis will organize attachments you consider important.</li>
+									</ul>
+								</div>
+								
+								<!--onclick="showPanels('panel-2');showPanels('nover-2');hidePanels('ver-2')"-->								
+                <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2"><div id="ver-2" class="text-left">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> MORE</span>
+                </div></a>
+
+                <div id="nover-2" class="text-left" style="cursor: pointer;display: none;" onclick="hidePanels('panel-2');showPanels('ver-2');hidePanels('nover-2')">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> LESS</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3" style="padding-right: 0px;">
+            <div class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box text-center">
+                
+                <h4 class="h-blue">Inventories</h4>
+                <img src="img/logo3.png" width="128px"></img>
+                <ul class="ul-litle text-left" style="text-justify: inter-word">
+                  <li>Have control of your inventories in a simple and efficient way.</li>
+                  <!--<li>Control your available.</li>
+                  <li>Receive alerts when your stock is running low.</li>-->
+                </ul>
+
+								<div class="collapse" id="collapseExample3">
+									<ul id="panel-3" class="ul-litle text-left" style="text-justify: inter-word;">
+										<li>Will let you know if you have many items of a single products.</li>
+										<li>Assis provides you with an items drop-down list.</li>
+										<li>It will share your products with members of the community.</li>
+									</ul>
+								</div>
+
+                <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3"><div id="ver-3" class="text-left">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> MORE</span>
+                </div></a>
+
+                <div id="nover-3" class="text-left" style="cursor: pointer;display: none;" onclick="hidePanels('panel-3');showPanels('ver-3');hidePanels('nover-3')">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> LESS</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3" style="padding-right: 0px;">
+            <div class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box text-center">
+
+                <h4 class="h-blue">Reports</h4>
+                <img src="img/logo4.png" width="128px"></img>
+                <ul class="ul-litle text-left" style="text-justify: inter-word">
+                  <li>Measure and keep abreast of all your business in real time.</li>
+                  <!--<li>Expected sales.</li>
+                  <li>Most selled products.</li>-->
+                </ul>
+
+								<div class="collapse" id="collapseExample4">
+									<ul id="panel-4" class="ul-litle text-left" style="text-justify: inter-word;">
+										<li>Assis will prepare and send periodic reports.</li>
+										<li>Assis will show you a process map of the a case.</li>
+										<li>Assis will detect bottlenecks in your sales structure.</li>
+									</ul>
+								</div>
+								
+                <a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4"><div id="ver-4" class="text-left">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> MORE</span>
+                </div></a>
+
+                <div id="nover-4" class="text-left" style="cursor: pointer;display: none;" onclick="hidePanels('panel-4');showPanels('ver-4');hidePanels('nover-4')">
+                  <img src="img/more.png" width="20px"><span style="color: #07abdc"> LESS</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- /Section: boxes -->
+
+
+    <section id="callaction" class="home-section paddingtop-40">
+      <div class="container-fluid bg-sop text-center justify-content-center">
+        <div class="row">
+          <div class="hrs">
+          </div>
+          <div class="col-md-12">
+            <a class="btn call-btn-lg btn-blue btn-lg" onclick="showModal('myModal')">SIGN UP FREE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section: services -->
+    <section id="service" class="bg-leblue nopadding paddingtop-10">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <span class="wow bounceInLeft" data-wow-delay="0.3s" style="color:#7d7d7c">15 days free - No registration - No credit card required</span>
+        </div>
+        <div class="row text-center paddingtop-20">
+          <h2 style="color: #013960">THE COMMERCIAL TOOL THAT WILL TAKE YOUR SALES<br>
+              TO A WHOLE NEW LEVEL</h2>
+              <div class="w3-content w3-display-container">
+                <img class="mySlides" src="img/slider1.jpg" style="width:100%">
+                <img class="mySlides" src="img/slider2.jpg" style="width:100%">
+                <img class="mySlides" src="img/slider3.jpg" style="width:100%">
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(1)"></span>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(2)"></span>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(3)"></span>
+                </div>
+              </div>
+          <!--<img class="mySlides" src="img/slider1.jpg">
+          <img class="mySlides" src="img/slider2.jpg">
+          <img class="mySlides" src="img/slider3.jpg">-->
+        </div>
+      </div>
+    </section>
+    <!-- /Section: services -->
+
+    <section class="bg-ledarkblue paddingtop-10" style="padding-bottom: 10px;">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <a class="btn btn-white btn-lewhite btn-lg" onclick="showModal('myModal')">GIVE IT A TRY</a>
+          </div>
+          <span class="wow bounceInLeft" data-wow-delay="0.3s" style="color:white;">No credit card required</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: pricing -->
+    <section id="pricing" class="bg-lesop paddingbot-20 paddingtop-20">
+      
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-sm-4 wow bounceInLeft" data-wow-delay="0.3s">
+            <h4 style="margin-top: 30%;">Take the best advantage<span style="font-size: 75px;">!</span></h4>
+            <h6>Assis Connecting is for you!</h6>
+            <p>Assis offers up to three (3) users for the same value. It does not matter if you are a freelancer, 
+              entrepreneur, company or you already have a sales team.</p>
+            <p>Our international team is 24/7 available to support you on the way to the commercial organization 
+              and success of your business.</p>
+            <div class="flex-container text-center">
+              <div class="col-md-4"><img src="img/face1.png"></div>
+              <div class="col-md-4"><img src="img/face2.png"></div>
+              <div class="col-md-4"><img src="img/face3.png"></div>
+            </div>
+          </div>
+          
+          <div class="col-sm-4 pricing-box featured-price">
+            <div class="wow bounceInUp" data-wow-delay="0.3s">
+              <div class="pricing-content featured text-center">
+                <img src="img/assis.png" width="75%" height="75px">
+              </div>
+              <div class="pricing-content featured">
+                <h3>$49<sup>.99</sup> <span>/ per month</span></h3>
+                <h3>$245<sup>.99</sup> <span>/ per semester</span></h3>
+                <h3>$490<sup>.99</sup> <span>/ per year</span></h3>
+                <div>
+                  <ul style="margin-bottom: 10px;">
+                    <li style="color: #013960">UP TO 3 USERS</li>
+                    <li>+ PROSPECTS</li>
+                    <li>+ SALES</li>
+                    <li>+ INVENTORIES</li>
+                    <li>+ REPORTS</li>
+                  </ul>
+                </div>
+
+                <div class="price-bottom">
+                  <a class="btn price-btn-lg btn-blue btn-lg" onclick="showModal('myModal')">START</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 pricing-box featured-price">
+            <div class="wow bounceInUp" data-wow-delay="0.3s">
+              <div class="pricing-content featured text-center">
+                <img src="img/assis2.png" width="40%" height="75px">
+              </div>
+              <div class="pricing-content featured">
+                <h3>$9<sup>.99</sup> <span>/ per month</span></h3>
+                <h3>$45<sup>.99</sup> <span>/ per semester</span></h3>
+                <h3>$90<sup>.99</sup> <span>/ per year</span></h3>
+                <div>
+                  <ul style="margin-bottom: 10px;">
+                    <li style="color: #013960">ADDITIONAL USERS</li>
+                    <li>+ PROSPECTS</li>
+                    <li>+ SALES</li>
+                    <li>+ INVENTORIES</li>
+                    <li>+ REPORTS</li>
+                  </ul>
+                </div>
+
+                <div class="price-bottom">
+                  <a class="btn price-btn-lg btn-blue btn-lg" onclick="showModal('myModal')">START</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+          <div class="text-center paddingtop-40 wow bounceInLeft" data-wow-delay="0.3s">
+            <p style="color: #013960">Join the more than 2,000 freelancers, vendors, entrepreneurs, administrators and directors around the world<br>
+            in more than 70 countries that are assisted every day to optimize their sales processes and increase conversions.</p>
+          </div>
+      </div>
+    </section>
+    <!-- /Section: pricing -->
+    <!--
+    <section id="callaction" class="home-section paddingtop-40">
+      <div class="container-fluid bg-sop text-center justify-content-center">
+        <div class="row">
+          <div class="hrs">
+          </div>
+          <div class="col-md-12">
+            <a class="btn call2-btn-lg btn-green btn-lg" onclick="showModal('myModal')">SIGN UP FREE</a>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Section: testimonial
+    <section id="testimonial" class="home-section paddingbot-80" style="padding-top: 0px;">
+
+      <div class="container">
+        <div class="row text-center">
+          <span class="wow bounceInLeft" data-wow-delay="0.3s" style="color:#95bb33">15 days free - No registration - No credit card required</span>
+        </div>
+        <div class="row text-center paddingtop-60 paddingbot-40">
+          <h2 class="wow bounceInLeft" data-wow-delay="0.3s" style="color:#95bb33"><b>What our strategic partners say!</b></h2>
+        </div>
+
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.2s" style="padding-left: 22.5px;padding-right: 22.5px;">
+          <img src="img/testi1.png" style="padding-bottom: 10px;">
+          <p class="text-justify" style="font-size:14px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+        </div>
+
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.2s" style="padding-left: 22.5px;padding-right: 22.5px;">
+          <img src="img/testi2.png" style="padding-bottom: 10px;">
+          <p class="text-justify" style="font-size:14px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+        </div>
+
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.2s" style="padding-left: 22.5px;padding-right: 22.5px;">
+          <img src="img/testi3.png" style="padding-bottom: 10px;">
+          <p class="text-justify" style="font-size:14px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+        </div>
+
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.2s" style="padding-left: 22.5px;padding-right: 22.5px;">
+          <img src="img/testi4.png" style="padding-bottom: 10px;">
+          <p class="text-justify" style="font-size:14px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+        </div>
+
+
+      </div>
+
+    </section>
+     /Section: testimonial -->
+    
+    <section class="bg-ledarkblue paddingtop-10 paddingbot-10">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <a class="btn btn-white btn-lewhite btn-lg" onclick="showModal('myModal')">GIVE IT A TRY</a>
+          </div>
+          <span style="color:white" class="wow bounceInLeft" data-wow-delay="0.3s">No credit card required</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-6 col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Resources</h5>
+                <ul>
+                  <li><a href="faq.html">Help Center </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="col-sm-6 col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Legal</h5>
+                <ul>
+                  <li><a href="#">Help Center </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>About</h5>
+                <ul>
+                  <li><a href="#">Help Center </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>-->
+          
+        </div>
+      </div>
+
+      <div class="">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-center">
+                  <p>&copy; Assis Connecting - 2018 All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/nivo-lightbox.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    "use strict";
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() 
+    {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        currentDiv(slideIndex);
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
+</html>
