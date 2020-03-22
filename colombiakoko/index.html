@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Colombia KoKo</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <!-- Favicon -->
+  <link href="img/logoses.png" rel="icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+</head>
+
+<script>
+// Open the Modal
+function openModal(modal) {
+  document.getElementById(modal).style.display = "block";
+}
+
+// Close the Modal
+function closeModal(modal) {
+  document.getElementById(modal).style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<style>
+.naves {
+  background-color: #b2a191;
+}
+#mobile-nav {
+  background-color: #b2a191;
+  padding: 15px;
+  padding-left: 35px;
+}
+
+#mobile-nav ul li {
+  width: 12rem;
+}
+
+.div_backgrndimg {
+    background-repeat: repeat-x;
+    background-image: url("img/border.png");
+    height: 70px;
+}
+.google-maps {
+    position: relative;
+    padding-bottom: 28rem;
+    height: 0px;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+}
+
+.navd li{
+  width: 269px
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1350px), (max-width: 1400px) {
+    .navd li {
+        width: 247px;
+    }
+}
+
+.row > .columna {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.columna {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 90px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.closeses {
+  color: black;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.closeses:hover,
+.closeses:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.alls {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.alls:hover,
+.alls:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: grey;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.rowa {
+  position: absolute;
+  bottom: 0px;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1100px), (max-width: 1200px){
+    .navd li {
+        width: 150px;
+    }
+
+    .close {
+      top: 90px;
+      right: 1.5px;
+      font-size: 20px;
+    }
+    
+    .closeses {
+      right: 1.5px;
+      font-size: 20px;
+    }
+
+    .modal{
+      padding-top: 40px;
+    }
+
+    .alls{
+      font-size: 10px;
+    }
+}
+
+.mySlideses {
+  display:none;  
+  opacity: 0;
+  animation: fadeouts 0.3s 0.1s ease-out forwards;
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+}
+
+@keyframes fadeouts {
+  from {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+</style>
+<body>
+  <!-- Page Content
+    ================================================== -->
+  <!-- Header -->
+  <header class="le-header" style="padding: 1.5rem 0 1.5rem 0;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10">
+          <img class="d-block mx-auto wow fadeIn delay-05s" src="img/logoses.png" width="145" height="145"> </div>
+        <div class="col-md-2 wow fadeIn delay-05s">
+          <div class="row d-flex justify-content-center align-items-center align-self-center">
+            <div class="col-md-4 d-flex justify-content-center">
+              <a href="https://www.facebook.com/Colombia-KOKO-597474323934850/?ref=py_c"><img class="d-block mx-auto" src="img/facebook.png" width="50" height="50"></a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+              <img class="d-block mx-auto" src="img/instagram.png" width="50" height="50"> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center align-items-center align-self-center flex-row">
+              <img class="d-block mx-auto" src="img/productosdecoco.png" width="100" height="100"> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav id="nav-menu-container" class="sticky-top naves">
+    <div class="container-fluid d-flex justify-content-center align-items-center align-self-center" style="padding-left: 0px;padding-right: 0px;">
+      <ul class="nav-menu navd">
+        <li class="nav-menu-a d-flex justify-content-center align-items-center align-self-center">
+          <a href="#about"><center><img src="img/empresa.png" width="30"></center>Empresa</a></li>
+        <li class="nav-menu-a d-flex justify-content-center align-items-center align-self-center">
+          <a href="#features"><center><img src="img/productos.png" width="45"></center>Productos</a></li>
+        <li class="nav-menu-a d-flex justify-content-center align-items-center align-self-center">
+          <a href="#portfolio"><center><img src="img/sucursales.png" width="34"></center>Franquicias</a></li>
+        <li class="nav-menu-a d-flex justify-content-center align-items-center align-self-center">
+          <a href="#team"><center><img src="img/ubicacion.png" width="20"></center>Ubicacion</a></li>
+        <li class="nav-menu-a d-flex justify-content-center align-items-center align-self-center">
+          <a href="#contact"><center><img src="img/contactanos.png" width="20"></center>Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="div_backgrndimg">
+  </div>
+  <!-- #header -->
+  <!-- Hero -->
+  <section class="hero" style="padding-top: 0px;padding-bottom: 0px;">
+    <img class="mySlideses" src="img/Hojuelas de coco.jpg">
+    <img class="mySlideses" src="img/Limonada de coco.jpg">
+    <img class="mySlideses" src="img/macflurry de coco.jpg">
+  </section>
+  <!-- /Hero -->
+  <!-- About -->
+  <section class="cta" id="about">
+    <div class="container text-center wow fadeInLeft delay-05s">
+      <h2>NUESTRA EMPRESA</h2>
+      <p>Colombia KoKo fue fundada en la ciudad de Santiago de Cali mejor conocida como La Sucursal del Cielo en el año 2018 gracias a la labor de emprendimiento de los jóvenes Oscar Perdomo y Andrea Ortiz.</p>
+      <p>La marca Colombia KoKo se estableció bajo la razón social Coma Coco S.A.S. Colombia KoKo es una empresa productora y comercializadora de productos 100% naturales, los cuales son derivados del coco y otros productos tropicales; nuestra empresa busca deleitar al paladar de los Caleños con productos naturales y de excelente calidad.
+      </p>
+    </div>
+  </section>
+  <!-- /About -->
+  <!-- Parallax -->
+  <div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg" data-settings="{&quot;stellar-background-ratio&quot;: 0.6}" data-toggle="parallax-bg">
+    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+  </div>
+  <!-- /Parallax -->
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container wow fadeInLeft delay-05s">
+      <h2 class="text-center">PRODUCTOS</h2>
+      <p>Nuestros productos son 100% derivados del coco. Cubrimos las principales necesidades de nuestros 
+        clientes, son presentados de manera innovadora. Y estamos en constante desarrollo para ofrecer lo más óptimo de manera natural y 
+        dentro de las posibilidades de cada persona.</p>
+      <!--<div class="row">
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div>
+                <img src="img/productos/avena de coco.jpg" width="250">
+              </div>
+            </div>            
+          </div>
+        </div>
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="">
+                  <img src="img/productos/coquitos.jpg" width="250">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="">
+                <img src="img/productos/crema de coco.jpg" width="250">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="">
+                  <img src="img/productos/hojuelas de coco.jpg" width="250">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="">
+                  <img src="img/productos/limonada de coco.jpg" width="250">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-col col-lg-4 col-xs-12">
+          <div class="card card-block text-center">
+            <div>
+              <div class="">
+                  <img src="img/productos/malteada de coco.jpg" width="250">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+    <div class="portfolio-grid">
+      <div class="row" style="margin-left: 0px;margin-right: 0px;">
+        <div class="col-lg-4 col-sm-6 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow rotateInUpRight delay-05s">
+            <img src="img/productos/avena de coco.jpg" width="20%" height="20%" onclick="openModal('myModal');currentSlide(1)" class="hover-shadow">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow rotateInUpRight delay-05s">
+            <img src="img/productos/coquitos.jpg" width="20%" height="20%" onclick="openModal('myModal');currentSlide(2)" class="hover-shadow">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow rotateInUpRight delay-05s">
+            <img src="img/productos/crema de coco.jpg" width="20%" height="20%" onclick="openModal('myModal');currentSlide(3)" class="hover-shadow">
+          </div>
+        </div>        
+      </div>
+      <div class="row" style="margin-left: 0px;margin-right: 0px;">
+        <div class="col-lg-4 col-sm-6 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow rotateInUpLeft delay-05s">
+            <img src="img/productos/hojuelas de coco.jpg" width="20%" height="20%" onclick="openModal('myModal');currentSlide(4)" class="hover-shadow">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow rotateInUpLeft delay-05s">
+            <img src="img/productos/limonada de coco.jpg" width="20%" height="20%" onclick="openModal('myModal');currentSlide(5)" class="hover-shadow">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow rotateInUpLeft delay-05s">
+            <img src="img/productos/malteada de coco.jpg" width="20%" height="20%" onclick="openModal('myModal');currentSlide(6)" class="hover-shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal')">&times;</span>
+      <div class="alls" onclick="openModal('mores')">ALL</div>
+      <div class="modal-content text-center">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="img/productos/avena de coco.jpg" style="width:55%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="img/productos/coquitos.jpg" style="width:55%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="img/productos/crema de coco.jpg" style="width:55%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="img/productos/hojuelas de coco.jpg" style="width:55%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="img/productos/limonada de coco.jpg" style="width:55%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="img/productos/malteada de coco.jpg" style="width:55%">
+        </div>
+    
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Caption text -->
+        <!-- <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+        Thumbnail image controls -->
+        <div id="mores" class="rowa" style="display: none">
+          <span class="closeses cursor" onclick="closeModal('mores')">&times;</span>
+          <div class="row">
+            <div class="col">
+              <img class="demo" src="img/productos/avena de coco.png" width="70%" onclick="currentSlide(1)" alt="Avena de Coco">
+            </div>
+        
+            <div class="col">
+              <img class="demo" src="img/productos/coquitos.png" width="70%" onclick="currentSlide(2)" alt="Coquitos">
+            </div>
+        
+            <div class="col">
+              <img class="demo" src="img/productos/crema de coco.png" width="70%" onclick="currentSlide(3)" alt="Crema de Coco">
+            </div>
+        
+            <div class="col">
+              <img class="demo" src="img/productos/hojuelas de coco.png" width="70%" onclick="currentSlide(4)" alt="Hojuelas de Coco">
+            </div>
+
+            <div class="col">
+              <img class="demo" src="img/productos/limonada de coco.png" width="70%" onclick="currentSlide(5)" alt="Limonada de Coco">
+            </div>
+            
+            <div class="col">
+              <img class="demo" src="img/productos/malteada de coco.png" width="70%" onclick="currentSlide(6)" alt="Malteada de Coco">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /Features -->
+  <!-- Call to Action -->
+  <section class="cta" id="portfolio" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center wow fadeInLeft delay-05s">
+          <h2>FRANQUICIAS</h2>
+          <p>Colombia koko es una empresa de productos derivados del coco, la franquicia de Colombia koko está especializada en ofrecer productos 100% a base de coco.
+Con Colombia koko nuestro inversionista puede alcanzar su sueño de independencia, contando con la asesoría y el respaldo de un experto, y sin los riesgos que implica la producción.
+Vamos a demostrar que no somos una moda pasajera.
+</p>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-grid">
+      <div class="row" style="margin-left: 0px;margin-right: 0px;">
+        <div class="col-lg-4 col-sm-6 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow fadeInLeft delay-05s">
+            <img src="img/franquicia1.jpg">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow fadeInUp delay-05s">
+            <img src="img/franquicia2.jpg">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+          <div class="card card-block wow fadeInRight delay-05s">
+            <img src="img/franquicia3.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Call to Action -->
+  <!-- Portfolio -->
+  <section class="portfolio" id="team">
+    <div class="wow fadeInLeft delay-05s container text-center">
+      <h2>UBICACION</h2>
+      <p>Estamos ubicados en importantes centros comerciales. Encontrará nuestros modernos stand de ventas. Con gran poder de atracción para los consumidores de nuestros productos. ¡Búscanos!</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="row wow fadeIn delay-05s">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="img/porf-1.jpg">
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="img/porf-2.jpg">
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="img/porf-3.jpg">
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="img/porf-4.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1879.5268864287339!2d-76.50158051525194!3d3.452034820700996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7ad6ab52c87%3A0x1af5d7f07f139490!2sClub+Social+Los+Amigos!5e0!3m2!1ses!2sve!4v1526142392344" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </section>
+  <!-- /Portfolio -->
+  <!-- Team -->
+
+  <!-- /Team -->
+  <!-- @component: footer -->
+  <section id="contact" class="text-center" style="padding-bottom: 0px;padding-top: 20px;">
+    <div class="container text-center">
+      <div class="row" style="margin-left: 0px;margin-right: 0px;">
+        <div class="col-md-12 text-center wow fadeInLeft delay-05s">
+          <h2 class="section-title" style="margin-bottom: 20px;">CONTACTO</h2>
+          <p>Vamos a demostrar que no somos una moda pasajera. Contáctenos para que se una a nuestra maravillosa idea. O simplemente cuéntenos como le cambio la vida nuestros productos de éxito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="background-color: white;padding-bottom: 10px;padding-top: 40px;">
+    <div class="container" style="padding-left: 5rem;padding-right: 5rem">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 wow fadeIn delay-05s">
+          <h3>¡CONTÁCTENOS!</h3>
+          <hr style="width:80px;margin-left: 0px;border-color:#b2a191">
+          <p style="color:#b2a191;font-style: italic">¡Contáctenos!</p>
+          </br>
+          <p style="color:black">Escríbanos acerca de alguna inquietud relacionada con nuestros servicios y estaremos encantados de atenderlo/a.</p>
+          <p style="color:#b2a191;font-style: italic">Escribanos sobre cualquier asunto relacionado con nuestro servicios y estaremos ayudarlo.</p>
+          <!--<div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>direccion</p>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p>info@example.com</p>
+            </div>
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+1 5589 55488 55s</p>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="row" style="background-color: white;padding-bottom: 10px;padding-top: 40px;padding-left: 0px;padding-right: 0px">
+        <div class="col-lg-12 col-md-12 wow fadeInUp delay-05s">
+          <div class="form">
+            <div id="sendmessage">Mensaje de exito!</div><!--borra esta meirda. El mensaje, no el div-->
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                Nombre / Nombre *<input type="text" name="name" class="form-control" id="name" placeholder="Su Nombre" data-rule="minlen:4" data-msg="Ingresar mínimo 4 caracteres">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                Correo Electronico / Correo Electronico *<input type="email" class="form-control" name="email" id="email" placeholder="Su Correo Electronico" data-rule="email" data-msg="Ingresar un Correo Electronico valido">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                  Teléfono / Teléfono *<input type="text" class="form-control" name="phone" id="phone" placeholder="Teléfono" data-rule="minlen:8" data-msg="Ingresar mínimo 8 caracteres">
+                  <div class="validation"></div>
+                </div>
+              <div class="form-group">
+                Asunto / Asunto *<input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:8" data-msg="Ingresar mínimo 8 caracteres">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                Mensaje / Mensaje *<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba algo para nosotros" placeholder="Mensaje"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-right">
+                <button class="btn" type="submit">ENVIAR</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="div_backgrndimg">
+  </div>
+
+  <footer class="site-footer">
+    <div class="bottom le-header">
+      <div class="row wow fadeInUp delay-05s">
+        <div class="col-md-2">
+          <img src="img/logoses.png" width="140">
+        </div>
+        <div class="col-md-8 text-center">
+          <p>El moderno y exclusivo estilo de nuestra cadena de derivados del coco, y nuestro novedoso concepto atraen al consumidor juvenil y crea cierta magia entre los consumidores de todas las edades.</p>
+        </div>
+        <div class="col-md-2">
+          <div class="row d-flex justify-content-center align-items-center align-self-center">
+            <div class="col-md-4 d-flex justify-content-center">
+              <a href="https://www.facebook.com/Colombia-KOKO-597474323934850/?ref=py_c"><img class="d-block mx-auto" src="img/facebook.png" width="50" height="50"></a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+              <img class="d-block mx-auto" src="img/instagram.png" width="50" height="50"> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center align-items-center align-self-center flex-row">
+              <img class="d-block mx-auto" src="img/productosdecoco.png" width="100" height="100"> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrolltop" href="#">
+    <span class="fa fa-angle-up"></span>
+  </a>
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/tether/js/tether.min.js"></script>
+  <script src="lib/stellar/stellar.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/easing/easing.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/parallax/parallax.js"></script>
+  <script src="lib/lockfixed/lockfixed.min.js"></script>
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script>
+    "use strict";
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() 
+    {
+        var i;
+        var x = document.getElementsByClassName("mySlideses");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
+</html>
