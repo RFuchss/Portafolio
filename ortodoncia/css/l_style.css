@@ -1,0 +1,433 @@
+* {
+    font-family: "josefin sans", arial;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.fade {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+  
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+  
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+  
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+
+#loader {
+    background: rgb(234, 234, 234);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    position: absolute;
+}
+
+#loader center img {
+    padding-top: 6%; 
+}
+
+.topnav {
+    background-color: #d1d2d4;
+    height: 10%;
+	z-index: 99;
+	width: 100%;
+	padding: 0;
+    margin: 0;
+    position:fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1vw 1vw;
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+#redes {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    height: 5%;
+    z-index: 99;
+    text-align: left;
+    font-size: 4vh;
+    margin-bottom: 3vh;
+}
+
+#redes a {
+    color: #1d2f41;
+}
+
+.hidden {
+    display: none;
+}
+/*---------------------------Section 1-------------------------------*/
+/*-------------------------------------------------------------------*/
+
+#section1 {
+    background-image: url(../img/bg/background_home.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+#section1 .index {
+    height: 80vh;
+}
+
+.l_index {
+    display: block;
+}
+
+.p_index {
+    display: none;
+}
+/*---------------------------Section 2-------------------------------*/
+/*-------------------------------------------------------------------*/
+
+#section2 {
+    background-image: url(../img/bg/background_dos.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+#section2 .soy {
+    height: 91vh;
+}
+
+#section2 .ls {
+    display: block;
+}
+
+#section2 .pt {
+    display: none;
+}
+
+#section2 .soytext h5 {
+    font-size: 2.5vh;
+}
+
+#section2 .soytext {
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    width: 38vh;
+    height: 40vh;
+    font-size: 1.5vh;
+    text-align: left;
+    color: white;
+}
+
+/*---------------------------Section 3-------------------------------*/
+/*-------------------------------------------------------------------*/
+
+#section3 {
+    background-image: url(../img/bg/background_servicios.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+.blueblock {
+    background-color: #1d2f41;
+    width: 28%;
+    height: 80vh;
+}
+
+#section3 .conten {
+    height: 100vh;
+}
+
+#section3 .text01 {
+    position: absolute;
+    top: 40vh;
+    left: 28vw;
+    font-size: 2vh;
+    text-align: left;
+    color: white;
+    width: 50vh;
+}
+
+#section3 .text02 {
+    position: absolute;
+    top: 40vh;
+    left: 29vw;
+    font-size: 2vh;
+    text-align: left;
+    color: white;
+    width: 60vh;
+}
+
+#section3 .text03 {
+    position: absolute;
+    top: 45vh;
+    left: 30vw;
+    font-size: 2vh;
+    text-align: left;
+    color: white;
+    width: 22vw;
+}
+
+#section3 .text04 {
+    position: absolute;
+    top: 45vh;
+    left: 48vw;
+    font-size: 2vh;
+    text-align: left;
+    color: white;
+    width: 21vw;
+}
+
+#section3 .ls {
+    display: block;
+}
+
+#section3 .pt {
+    display: none;
+}
+
+.slide {
+    display: none;  
+    opacity: 0;
+    animation: fadeout 0.3s 0.1s ease-out forwards;
+}
+
+@keyframes fadeout {
+    from {
+      opacity: 0.125;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+#section3 .btn-cita {
+    z-index: 999;
+    position: absolute;
+    top: 80%;
+    left: 45vw;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid white 1px;
+    color: white;
+    padding: 2vh 2vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vh;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#section3 .btn-cita:hover {
+    background-color: white;
+    color: #1d2f41;
+    text-decoration: none;
+}
+
+#section3 .prev-slide {
+    position: absolute;
+    bottom: 15%;
+    left: 2.5%;
+    cursor: pointer;
+    color: gainsboro;
+    font-size: 8vh;
+    text-shadow: 2px 2px black;
+}
+
+#section3 .next-slide {
+    position: absolute;
+    bottom: 15%;
+    right: 2.5%;
+    cursor: pointer;
+    color: gainsboro;
+    font-size: 8vh;
+    float: right;
+    text-shadow: 2px 2px black;
+}
+
+/*---------------------------Section 4-------------------------------*/
+/*-------------------------------------------------------------------*/
+
+#section4 {
+    background-image: url(../img/bg/background_dos.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+#section4 .contacto {
+    height: 100vh;
+    margin-bottom: 10vh;
+}
+
+#section4 .ls {
+    display: block;
+}
+
+#section4 .pt {
+    display: none;
+}
+
+#section4 .validation {
+    color: red;
+    display: none;
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#section4 .formulario {
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    width: 43%;
+}
+
+#section4 .direccion {
+    padding-top: 15vh;
+    text-align: left;
+    font-size: 2vh;
+}
+
+#section4 .direccion p{
+    color: white;
+}
+/*---------------------------Section 5-------------------------------*/
+/*-------------------------------------------------------------------*/
+
+#section5 {
+    background-image: url(../img/bg/background_home.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+#section5 .cita {
+    height: 100vh;
+    margin-bottom: 10vh;
+}
+
+#section5 .ls {
+    display: block;
+}
+
+#section5 .pt {
+    display: none;
+}
+
+#section5 .formulario {
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    width: 43%;
+}
+
+.form-group {
+    margin: 1vh 0;
+}
+
+.form-control {
+    font-size: 2vh;
+    background-color: #435460;
+    border: 0.5vh solid #fff;
+    border-radius: 0;
+    padding: 2vh 3vh;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #fff;
+}
+
+.btn-form {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid white 1px;
+    color: white;
+    padding: 2vh 4vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.75vh;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.btn-form:hover {
+    background-color: white;
+    color: #1d2f41;
+    text-decoration: none;
+}
+
+.btn-cita {
+    position: absolute;
+    top: 70%;
+    left: 37.5%;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid white 1px;
+    color: white;
+    padding: 1vh 1vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5vh;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 12%;
+}
+
+.btn-cita:hover {
+    background-color: white;
+    color: #1d2f41;
+    text-decoration: none;
+}

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+	<title>Catalina Montoya Ortodoncia y Estética Dental</title>
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Ortodoncia y Estética Dental" />
+	<meta name="keywords"  content="Ortodoncia,Estética,Dental" />
+	<meta name="Resource-type" content="Document" />
+
+	<link href="img/logo_grande.png" rel="icon">
+
+	<link rel="stylesheet" type="text/css" href="lib/wow/css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="lib/pagepiling/css/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.min.css" />
+
+	<link rel="stylesheet" media="screen and (orientation: landscape)" href="css/l_style.css" />
+	<link rel="stylesheet" media="screen and (orientation: portrait)" href="css/p_style.css" />
+
+	<script src="lib/wow/js/wow.js"></script>
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/pagepiling/js/jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		var wow = new WOW({
+			boxClass:     'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset:       0,          // distance to the element when triggering the animation (default is 0)
+			mobile:       true,       // trigger animations on mobile devices (default is true)
+			live:         true,       // act on asynchronously loaded content (default is true)
+			callback:     function(box) {
+			// the callback is fired every time an animation is started
+			// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null,    // optional scroll container selector, otherwise use window,
+			resetAnimation: false,     // reset animation on end (default is true)
+		});
+		wow.init();
+		$(document).ready(function() {
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	          	direction: 'horizontal',
+				menu: false,
+				scrollingSpeed: 1000,
+	    		anchors: ['Inicio', 'QuienSoy', 'Servicios', 'Contacto', 'Cita'],
+				navigation: false,
+				
+				onLeave: function(index, nextIndex, direction) {
+					document.getElementById('sec1').removeAttribute('style');
+					document.getElementById('sec2').removeAttribute('style');
+					document.getElementById('sec3').removeAttribute('style');
+					document.getElementById('sec4').removeAttribute('style');
+					document.getElementById('sec5').removeAttribute('style');
+
+					if (nextIndex == 1) {
+						document.getElementById('sec1').classList.remove('fade');
+						document.getElementById('sec1').classList.add('wow', 'slideInDown');
+
+						document.getElementById('sec2').classList.remove('wow');
+						document.getElementById('sec2').classList.replace('slideInDown','fade');
+					}
+					else if (nextIndex == 2) {
+						document.getElementById('sec2').classList.remove('fade');
+						document.getElementById('sec2').classList.add('wow', 'slideInDown');
+
+						document.getElementById('sec1').classList.remove('wow');
+						document.getElementById('sec1').classList.replace('slideInDown','fade');
+
+						document.getElementById('sec3').classList.remove('wow');
+						document.getElementById('sec3').classList.replace('slideInDown','fade');
+					}
+					else if (nextIndex == 3) {
+						document.getElementById('sec3').classList.remove('fade');
+						document.getElementById('sec3').classList.add('wow', 'slideInDown');
+
+						document.getElementById('sec2').classList.remove('wow');
+						document.getElementById('sec2').classList.replace('slideInDown','fade');
+
+						document.getElementById('sec4').classList.remove('wow');
+						document.getElementById('sec4').classList.replace('slideInDown','fade');
+					}
+					else if (nextIndex == 4) {
+						document.getElementById('sec4').classList.remove('fade');
+						document.getElementById('sec4').classList.add('wow', 'slideInDown');
+
+						document.getElementById('sec3').classList.remove('wow');
+						document.getElementById('sec3').classList.replace('slideInDown','fade');
+
+						document.getElementById('sec5').classList.remove('wow');
+						document.getElementById('sec5').classList.replace('slideInDown','fade');
+					}
+					else if (nextIndex == 5) {
+						document.getElementById('sec5').classList.remove('fade');
+						document.getElementById('sec5').classList.add('wow', 'slideInDown');
+
+						document.getElementById('sec4').classList.remove('wow');
+						document.getElementById('sec4').classList.replace('slideInDown','fade');
+					}
+					else {
+						
+					}
+					var wow = new WOW();
+					wow.init();
+				},
+
+				afterRender: function() {
+				}
+			});
+	    });
+	</script>
+	<style>
+		#errormessages, #errormessage {
+			color: red;
+			font-weight: bold;
+			font-size: 1.5vh;
+			padding: 1vh;
+			border-radius: 0;
+			margin-bottom: 0;
+			width: 100%;
+			/*margin-top: 4vh;*/
+		}
+
+		#sendmessage, #sendmessages {
+			color: green;
+			font-weight: bold;
+			font-size: 1.5vh;
+			padding: 1vh;
+			border-radius: 0;
+			margin-bottom: 0;
+			width: 100%;
+			/*margin-top: 4vh;*/
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="loader">
+		<center>
+			<img src="img/logo_grande.png" width="50%" height="50%">
+		</center>
+		<center>
+			<img src="img/spinner.gif" width="5%" height="5%" style="padding-top: 6%;">
+		</center>
+	</div>
+
+	<div id="myTopnav" class="topnav">
+		<a href="#Inicio" class="animated fadeInDown delay-0s">Inicio</a>
+		<a href="#QuienSoy" class="animated fadeInDown delay-025s">Quién Soy</a>
+		<a href="#Servicios" class="animated fadeInDown delay-05s">Servicios</a>
+		<a href="#Contacto" class="animated fadeInDown delay-075s">Contacto</a>
+		<a href="javascript:void(0);" class="icon" onclick="menuResponsive()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
+	<ul id="redes">
+		<a href="https://www.facebook.com/dra.catalinamontoya/" class="animated fadeIn delay-0s" target="_blank"><li class="fab fa-facebook"></li></a>
+		<a href="https://www.instagram.com/dra.catalinamontoya/" class="animated fadeIn delay-025s" target="_blank"><li class="fab fa-instagram"></li></a>
+		<a href="https://dracatalinamontoya.blogspot.com/" class="animated fadeIn delay-075s" target="_blank"><li class="fab fa-blogger"></li></a>
+	</ul>
+
+	<div id="pagepiling">
+
+		<div class="section" id="section1">
+			<center>
+				<div id="sec1" class="index wow slideInDown">
+					<img class="l_index" src="img/imagen_index.png" height="100%">
+					<img class="p_index" src="img/p_index.png" width="100%">
+					<a href="#Cita" class="btn-cita">AGENDA TU CITA</a>
+				</div>
+			</center>
+		</div>
+	
+		<div class="section" id="section2">
+			<center>
+				<div id="sec2" class="soy wow slideInDown">
+					<img class="ls" src="img/quien_soy.png" height="100%">
+					<img class="pt" src="img/p_soy.png" width="100%">
+
+					<div class="soytext" style="display: none;">
+						<center><h5>¿QUIÉN SOY?</h5></center>
+						<p>
+							Catalina Montoya odontóloga especialista en ortodoncia 
+							y ortopedia maxilar egresada de la universidad Colegio
+							Odontológico Colombiano de la ciudad de Cali, además ha 
+							realizado estudios en Estética Dental en la Universidad del Valle.
+							En el transcurso de su carrera ha realizado estudios en diferentes
+							técnicas ortodenticas como MEAW, MBT, DOIT, ANCLAJE CON MICROIMPLANTES.
+							Igualmente entrenamiento en Estética Dental con la Dra LINA MARIA MUÑOZ
+							RAMIREZ en la ciudad de BOGOTA
+						</p><br>
+						<p> Con más de 20 participaciones en Congresos Nacionales e
+							internacionales de la Sociedad Colombiana de Ortodoncia de la cual
+							es miembro activo desde el 2012.
+						</p>
+					</div>
+				</div>
+			</center>
+		</div>
+	
+		<div class="section" id="section3">
+			<center>
+				<div id="sec3" class="wow slideInDown">
+					<a href="#Cita" class="btn-cita ">AGENDA TU CITA</a>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/ortodoncia.png" height="100%">
+							<img class="pt" src="img/servicios/p_ortodoncia.png" width="100%">
+							<div class="text01" style="display: none;">
+								<p>
+									La ortodoncia es una especialidad odontológica que estudia, previene y corrige las 
+									alteraciones del desarrollo, las formas de las arcadas dentarias y la posición de 
+									los maxilares, con el fin de restablecer el equilibrio morfológico y funcional de 
+									la boca y de la cara, mejorando también la estética facial. El objetivo de la orto
+									doncia es la movilidad de los dientes buscando su normalización oclusal, o el desp
+									lazamiento de todo el conjunto dentario, sobre todo, para corregir trastornos func
+									ionales de la masticación. La oclusión se basa en las relaciones de contacto que e
+									xisten entre los dientes de las distintas arcadas.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/ortopedia_maxilar.png" height="100%">
+							<img class="pt" src="img/servicios/p_ortopedia_maxilar.png" width="100%">
+							<div class="text02" style="display: none">
+								<p>
+									Es la especialidad de la odontología que ayuda a corregir y evitar las deformid
+									ades de los maxilares, por medio de aparatos ortopédicos dependiendo cada caso.
+									La edad ideal para iniciar un tratamiento de ortopedia maxilar es durante la e
+									tapa de crecimiento del niño y del adolescente, entre 2 y los 15 años. En much
+									os casos decidimos tratar muy temprano cuando se detecta una anomalía en el de
+									sarrollo de los huesos maxilares o por presencia de malos hábitos como chupar 
+									dedo o chupo de entretención cuando el factor hereditario juega un papel impor
+									tante en el desequilibrio del crecimiento. Es atraves de la ortopedia maxilar 
+									que podemos influenciar y redireccionar el crecimiento de los huesos utilizand
+									o distintos tipos de aparatos fijos o removibles.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/ENDODONCIA.png" height="100%">
+							<img class="pt" src="img/servicios/p_ENDODONCIA.png" width="100%">
+						</div>
+					</div>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/periodoncia.png" height="100%">
+							<img class="pt" src="img/servicios/p_periodoncia.png" width="100%">
+							<div class="text03" style="display: none;">
+								<p>
+									Es una especialidad médico-quirúrgica odontológica que estudia la prevención, d
+									iagnostico y tratamiento de las enfermedades y condiciones que afectan los teji
+									dos que dan soporte a los órganos dentarios (encía, ligamento periodontal, ceme
+									nto radicular y hueso alveolar) y a los substitutos implantados, para el manten
+									imiento de la salud, función y estética de los dientes y sus tejidos adyacentes.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/rehabilitacion.png" height="100%">
+							<img class="pt" src="img/servicios/p_rehabilitacion.png" width="100%">
+							<div class="text04" style="display: none;">
+								<p>
+									La rehabilitación oral es una ESPECIALIZACIÓN DE LA ODONTOLOGÍA
+									ENCARGADA DE DEVOLVER LA ESTETÍCA FUNCIÓN Y ARMONÍA ORAL DE fo
+									rma integral POR MEDIO DE prótesis fija, CORONAS DENTALES, pró
+									tesis removibles, operatoria, oclusión e implante dental.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/CIRUGIA.png" height="100%">
+							<img class="pt" src="img/servicios/p_CIRUGIA.png" width="100%">
+						</div>
+					</div>
+					<div class="slide">
+						<div class="conten">
+							<img class="ls" src="img/servicios/odontopediatria.png" height="100%">
+							<img class="pt" src="img/servicios/p_odontopediatria.png" width="100%">
+						</div>
+					</div>
+				</div>
+			</center>
+			<a class="prev-slide" onclick="plusDivs(-1);">&#10094;</a>
+			<a class="next-slide" onclick="plusDivs(+1);">&#10095;</a>
+		</div>
+			
+		<div class="section" id="section4">
+			<center>
+				<div id="sec4" class="contacto wow slideInDown">
+					<img class="ls" src="img/contacto.png" height="100%">					
+					<img class="pt" src="img/p_contacto.png" width="100%">
+					
+					<div class="formulario">
+						<div class="row">
+							<div class="col-md-8" style="margin-top: 2%;">
+								<div id="sendmessage" class="hidden" role="alert"></div>
+								<div id="errormessage" class="hidden" role="alert"></div>
+								<form method="POST" role="form" id="formid" action="#">
+									<div class="form-group">
+										<input type="text" name="name" class="form-control" id="name" placeholder="NOMBRE" data-rule="minlen:4" data-msg="Por favor escriba al menos 4 letras" minlength="4" required style="height: 6vh;"/>
+										<div class="validation"></div>
+									</div>
+									<div class="form-group">
+										<input type="email" class="form-control" name="email" id="email" placeholder="SU MAIL" data-rule="email" data-msg="Por favor escriba Email valido" required style="height: 6vh;" />
+										<div class="validation"></div>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="subject" id="subject" placeholder="ASUNTO" data-rule="minlen:4" data-msg="Por favor escriba al menos 8 letras" minlength="8" required style="height: 6vh;" />
+										<div class="validation"></div>
+									</div>
+									<div class="form-group">
+										<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba algo para nosotros" placeholder="MENSAJE" required style="height: 12vh;"></textarea>
+										<div class="validation"></div>
+									</div>
+									<div class="text-center"><button class="btn-form" type="submit" onclick="enviar()">Enviar Mensaje</button></div>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<div class="direccion">
+									<i class="fas fa-map-marker-alt" style="color: white;float: left;padding-right: 1vh;"></i> 
+									<p>Carrera 18 # 10 - 08 B./ Ricaurte - Dagua - Valle</p><br>
+									<i class="fas fa-map-marker-alt" style="color: white;float: left;padding-right: 1vh;"></i>
+									<p>Calle 15 Norte # 6N - 34 Ofic. 903 Edif. Alcazar - Cali</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</center>		
+		</div>
+		
+		<div class="section" id="section5">
+			<center>
+				<div id="sec5" class="cita">
+					<img class="ls" src="img/cita.png" height="100%">					
+					<img class="pt" src="img/p_cita.png" width="100%">
+
+					<div class="formulario" style="margin-top: 2%;">
+						<div id="sendmessages" class="hidden" role="alert"></div>
+						<div id="errormessages" class="hidden" role="alert"></div>
+						<form method="POST" role="form" id="formcitaid" action="#">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="NOMBRE" data-rule="minlen:4" data-msg="Por favor escriba al menos 4 letras" minlength="4" required style="height: 6vh;"/>
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<input type="text" name="phone" class="form-control" id="phone" placeholder="TELÉFONO" data-rule="minlen:8" data-msg="Por favor escriba al menos 8 letras" minlength="8" required style="height: 6vh;"/>
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" name="email" id="email" placeholder="SU MAIL" data-rule="email" data-msg="Por favor escriba Email valido" required style="height: 6vh;" />
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-6">
+										<input type="date" class="form-control" name="date" id="date" placeholder="FECHA DE CITA" data-rule="date" data-msg="Por favor seleccione una Fecha valida" required style="height: 6vh;" />
+										<div class="validation"></div>
+									</div>
+									<div class="col-6">
+										<input type="time" class="form-control" name="time" id="time" placeholder="HORA DE CITA" data-rule="time" data-msg="Por favor seleccione una Hora valida" required style="height: 6vh;" />
+										<div class="validation"></div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba su motivo para la cita" placeholder="MOTIVO DE CITA" required style="height: 12vh;"></textarea>
+								<div class="validation"></div>
+							</div>
+							<div class="text-center"><button class="btn-form" type="submit" onclick="enviarcita()">ENVIAR</button></div>
+						</form>
+					</div>
+				</div>
+			</center>
+		</div>
+
+	</div>
+	<script>
+    "use strict";
+    var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+				showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("slide");
+				if (n > x.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = x.length} ;
+				for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+				}
+				x[slideIndex-1].style.display = "block";
+		}
+		$('#formid').submit(false);
+
+		function enviar() {
+    	var str = $('#formid').serialize();
+
+			$.ajax({
+				type: "POST",
+				url: "contactform/contactform.php",
+				data: str,
+				success: function(msg) {
+
+					if (msg == 'Su Mensaje ha sido enviado!') {
+						$("#sendmessage").removeClass("hidden");
+						$("#sendmessage").addClass("show alert alert-success");						
+						$("#sendmessage").html(msg);
+
+						$("#errormessage").removeClass("show alert alert-danger");
+						$("#errormessage").addClass("hidden");
+						$("#errormessage").html("");
+
+						$('.contactForm').find("input, textarea").val("");
+					} else {
+						$("#sendmessage").addClass("hidden");
+						$("#sendmessage").removeClass("show alert alert-success");
+						$("#sendmessage").html("");
+						
+						$("#errormessage").removeClass("hidden");
+						$("#errormessage").addClass("show alert alert-danger");
+						$('#errormessage').html(msg);
+					}
+				}
+			});
+		}
+
+		$('#formcitaid').submit(false);
+
+		function enviarcita() {
+    	var str = $('#formcitaid').serialize();
+				
+			$.ajax({
+				type: "POST",
+				url: "contactform/contactformcita.php",
+				data: str,
+				success: function(msg) {
+					
+					if (msg == 'Su Mensaje ha sido enviado!') {
+						$("#sendmessages").removeClass("hidden");
+						$("#sendmessages").addClass("show alert alert-success");
+						$("#sendmessages").html(msg);
+
+						$("#errormessages").removeClass("show alert alert-danger");
+						$("#errormessages").addClass("hidden");
+						$("#errormessages").html("");
+
+						$('.contactForm').find("input, textarea").val("");
+					} else {
+						$("#sendmessages").addClass("hidden");
+						$("#sendmessages").removeClass("show alert alert-success");
+						$("#sendmessages").html("");
+
+						$("#errormessages").removeClass("hidden");
+						$("#errormessages").addClass("show alert alert-danger");
+						$('#errormessages').html(msg);
+					}
+				}
+			});
+		}
+
+		function menuResponsive() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+
+			var y = document.getElementById("redes");
+			if (x.className === "topnav") {
+				y.className = "";
+			} else {
+				y.className += " hidden";
+			}
+		}
+
+		window.onload = function () {
+			var loader = document.getElementById("loader");
+			loader.className += "fade";
+
+			setTimeout (function () {
+				loader.className += " hidden";
+			}, 1000);
+		};
+	</script>
+</body>
+</html>
